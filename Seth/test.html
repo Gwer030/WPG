@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+        <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+  </head>
+  <body>
+    <script type="text/ng-template" id="pages/rules.html">
+      <h1>Правила!</h1>
+      <h3>{{message}}</h3>
+    </script>
+    <script type="text/ng-template" id="pages/chat.html">
+      <h1>Чат?</h1>
+      <h3>{{message}}</h3>
+    </script>
+    <script type="text/ng-template" id="pages/map.html">
+      <h1>Карта?!</h1>
+      <h3>{{message}}</h3>
+    </script>
+
+    <a href="#/">Правила!</a>
+    <a href="#/chat">Чат?</a>
+    <a href="#/map">Карта?!</a>
+
+    <div ng-view></div>
+
+    <script src="root.js"></script>
+  </body>
+</html>
