@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormBuilder,Validators} from '@angular/forms'
 @Component({
   
   selector: 'app-events',
@@ -14,8 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  constructor() { }
-
+ 
   ngOnInit() {
   }
 
