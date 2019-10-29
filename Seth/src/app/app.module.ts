@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { RulesComponent } from './rules/rules.component';
 import { MapComponent } from './map/map.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { MyCountryComponent } from './MyCountry/MyCountry.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 @NgModule({
@@ -14,7 +16,8 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     EventsComponent,
     RulesComponent,
     MapComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    MyCountryComponent
   ],
   imports: [
     BrowserModule,
