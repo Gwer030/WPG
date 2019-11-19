@@ -8,7 +8,11 @@ import { RulesComponent } from './rules/rules.component';
 import { MapComponent } from './map/map.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { MyCountryComponent } from './MyCountry/MyCountry.component';
+import {Injectable}from '@angular/core'
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { from } from 'rxjs';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     RulesComponent,
     MapComponent,
     RegistrationFormComponent,
-    MyCountryComponent
+    MyCountryComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
