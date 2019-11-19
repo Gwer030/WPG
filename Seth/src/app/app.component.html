@@ -6,18 +6,35 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div style="text-align: center">
-<h2>Военно-политическая игра
-</h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">ВПИ</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/events" routerLinkActive="active">События</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/map" routerLinkActive="active">Карта</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+        <a class="nav-link"  routerLink="/login" routerLinkActive="active">Вход</a>
+        <a class="nav-link"  routerLink="/register" routerLinkActive="active">Регистрация</a>
+               
+    </ul>
+  </div>
+</nav>    
+<div class="container">
+  <router-outlet></router-outlet>            
 </div>
-<nav>
-  <a [routerLink]="['/registration']" routerLinkActive="router-link-active">Вход</a> 
-  <a routerLink="/events" routerLinkActive="active"  >События</a>
-  <a routerLink="/map" routerLinkActive="visited" >Карта</a>
-  <a routerLink="/resources" routerLinkActive="active" >Ресурсы</a>
-  <a routerLink="/rules" routerLinkActive="hover" >Правила</a>
-  <a routerLink="/MyCountry" routerLinkActive="active" >Моя страна</a>
-</nav>
+
+
+
+
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -30,4 +47,4 @@
 
 
 
-<router-outlet></router-outlet>
+

@@ -8,12 +8,11 @@ import { RulesComponent } from './rules/rules.component';
 import { MapComponent } from './map/map.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { MyCountryComponent } from './MyCountry/MyCountry.component';
-import {Injectable}from '@angular/core'
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
-import { from } from 'rxjs';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { AuthService } from './auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +28,10 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
