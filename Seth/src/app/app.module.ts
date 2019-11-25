@@ -6,23 +6,24 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { RulesComponent } from './rules/rules.component';
 import { MapComponent } from './map/map.component';
-import { ResourcesComponent } from './resources/resources.component';
+
 import { MyCountryComponent } from './MyCountry/MyCountry.component';
-import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AuthService } from './auth.service';
+import { EventService } from './event.service';
+import { SpecialEventsComponent } from './special-events/special-events.component';
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
     RulesComponent,
     MapComponent,
-    RegistrationFormComponent,
     MyCountryComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    SpecialEventsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,7 @@ import { AuthService } from './auth.service';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService,EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

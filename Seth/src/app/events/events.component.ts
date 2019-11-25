@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,Validators} from '@angular/forms'
+import {EventService} from '../event.service'
 @Component({
-  
   selector: 'app-events',
-  template: `
-  <div style="text-align: center">
-    <h1>
-    В этой секции будут описаны события происходящие в ВПИ
-    <h1>
+  templateUrl: './events.component.html',
+  styleUrls: ['./events.component.css']
 
-  `,
-  styles: []
 })
 export class EventsComponent implements OnInit {
+  events= []
+  constructor(private _eventService: EventService) { }
 
- 
   ngOnInit() {
+    this._eventService.getEvents()
+      .subscribe(
+        res =>this.events =res,
+        err =>console.log(err)
+      )
   }
 
 }
