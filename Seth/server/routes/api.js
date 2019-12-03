@@ -50,13 +50,29 @@ router.post('/login',(req,res)=>{
         }
     })
 })
-router.get('/events',(req,res) => {
+router.get('/events',(req,res,verifyToken) => {
     let events = []
     res.json(events)   
 })
-router.get('/special',(req,res) => {
+router.get('/special', (req,res) => {
     let events = []
     res.json(events)   
 })
+function verifyToken(req,res,next){
+    if(!req.headers.authorization){
+        return res.status(401).send('Unauthorized request')
+    }
+    let token = req.headers.authorization.split(' ')[1]
+    if (token ==='null'){
+        return res.status(401).send('Unauthorized request')
+    }
+    let payload = jwt.verify(token,'secretKey')
+    if(!payload){
+        return res.status(401).send('Unauthorized request')
+    }
+    req.userId = payload.subject
+    next()
 
-module.exports =router 
+}
+
+module.exports = router 
